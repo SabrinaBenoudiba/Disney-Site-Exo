@@ -1,0 +1,130 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing :border-box 
+}
+.logo{
+    width: 100px; 
+}
+ul li{ 
+   list-style: none; 
+   margin: 5%; 
+   }
+.logoliloetstitchecriture{
+    width: 350px;
+}
+a{
+    text-decoration: none; /*Pour retirer le soulignement bleu du texte*/
+}
+.header{ /*C'est la boîte principale boîte parent*/
+   display: flex; 
+}
+.menuLink{ /*C'est la boîte parent par défaut de mon menuLink : c'est pour agir seulement sur le menuLink qui est dans mon menu ul li*/
+    display: flex;
+}
+.DisneyPicture1{
+    background-image:url(images/sourir.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+}
+.DisneyPicture2{
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+    background-color:whitesmoke;
+    width: 100%;
+}
+.disneyPictureP{
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.disneyPictureBold{
+    font-weight: bold;
+}
+.bas1{
+    margin-top: 8em;
+}
+.bas2et3{
+    margin-top: 11em;
+}
+.bas4{
+    margin-top: 6em;
+}
+.cardImg{
+    width: 300px;
+}
+p{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+.sectionDisneyPlus{
+    background-color:rgb(1, 52, 59)
+}
+.SurDisney{
+    display: flex;
+    color:white;
+    justify-content: center;
+}
+.disneyTitle{
+    color:#fffff7;
+    text-align: center;
+}
+#disney{
+    padding: 8px;
+    margin: 8px;
+
+}
+.cardImg2{
+    color: white;
+    width: 500px;
+}
+.cardImgMargin{
+    margin-right: 2em;
+    margin-left: 2em;
+}
+.inscription{
+    text-align: end;
+}
+.basDuSite{
+    background-color: whitesmoke;
+}
+.color{
+    background-color: #fffff7;
+}
+.parcsHaut{
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.parcsTitle2{
+   text-align: center; 
+}
+.parcsPicture{
+    display: flex;
+}
+.parcsImg{
+    margin-top: 4em;
+    width: 700px;
+    justify-content: space-evenly;
+}
+.spectaclesTitle{
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.spectaclePicture{
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+    background-color:whitesmoke;
+}
+.leRoiLionPicture{
+    width: 600px;
+}
+.spectacleBold{
+    font-weight: bold;
+}
+
