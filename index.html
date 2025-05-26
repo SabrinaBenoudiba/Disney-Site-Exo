@@ -13,24 +13,50 @@
 <body> <!--EFFET PARALLAX-->
     <header>
         <div class="header">  <!--C'est la boîte principale boîte parent -->
-            <div>
+            <div class="desktopMenu" >
+                <div>
                 <img class="logo" src="images/logo disney grand.png" alt="logo">
+                </div>
+                <div >
+                    <nav>
+                        <ul class="menuLink"> <!--C'est la boîte parent par défaut de mon menuLink -->
+                            <li><a href="#">DISNEY+</a></li>
+                            <li><a href="#">BOUTIQUE</a></li>
+                            <li><a href="#">FILMS</a></li>
+                            <li><a href="#">PARCS</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div >
-                <nav>
-                    <ul class="menuLink"> <!--C'est la boîte parent par défaut de mon menuLink -->
-                        <li><a href="#">DISNEY+</a></li>
-                        <li><a href="#">BOUTIQUE</a></li>
-                        <li><a href="#">FILMS</a></li>
-                        <li><a href="#">PARCS</a></li>
-                    </ul>
+            
+            <div class="menuBurgerDisney">
+                <nav class="mobilescreen">
+                    <div title="Menu" id="menuToggle">
+                        <input type="checkbox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <li class="space">
+                                <a href="#">DISNEY+</a>
+                            </li>
+                            <li class="space">
+                                <a href="#">BOUTIQUE</a>
+                            </li>
+                            <li class="space">
+                                <a href="#">FILMS</a>
+                            </li>
+                            <li class="space">
+                                <a href="#">PARCS</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
-        </div>
     </header>
     <main>
-    <section>
-        <div class="DisneyPicture1">
+    <section class="DisneyPicture1">
+        <div >
             <div>
                 <img class="logoliloetstitchecriture"src="images/lilo_stitch_logo ecriture rouge.png" alt="logoliloetstitchecriture">
                 <p class="textaline1">Actuellement au cinéma</p>
@@ -84,8 +110,8 @@
                 </div>
                 <div>
                     <img class="cardImg2 cardImgMargin"src="images/the-stolen-girl.jpg" alt="thestolengirl">
-                    <p>The Stolen Girl</p>
-                    <p>Avec Contrôle Parental</p>
+                    <p class="textPad">The Stolen Girl</p>
+                    <p class="textPad">Avec Contrôle Parental</p>
                 </div>
                 <div>
                     <img class="cardImg2"src="images/secrets-of-the-penguins.jpg" alt="manchots">
@@ -148,7 +174,7 @@
 </main>            
 <main>
     <section>
-        <div >
+        <div class="basDuSite">
             <div>
                 <h2 class="centerTitle padding2">Boutique</h2>
             </div>
@@ -164,8 +190,8 @@
         <div class="padding1 basDuSite">
             <h2 class="centerTitle padding2">Films</h2>
             <div class="PicturesSection">
-                <div>
-                   class="padding1 basDuSite" <img class="PicturesSection5" src="images/captain america.jpg" alt="captainAmerica">
+                <div class="padding1 basDuSite">
+                   <img class="PicturesSection5" src="images/captain america.jpg" alt="captainAmerica">
                     <p class="margeSection5">Captain America: Brave New <br>World</p>
                 </div>
                 <div>

@@ -10,12 +10,19 @@ ul li{
    list-style: none; 
    margin: 5%; 
    }
-
-.logoliloetstitchecriture{
-    width: 350px;
+body{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 }
 a{
     text-decoration: none; /*Pour retirer le soulignement bleu du texte*/
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+a:hover{
+    color: blue
 }
 .header{ /*C'est la boîte principale boîte parent*/
    display: flex; 
@@ -23,24 +30,31 @@ a{
 .menuLink{ /*C'est la boîte parent par défaut de mon menuLink : c'est pour agir seulement sur le menuLink qui est dans mon menu ul li*/
     display: flex;
 }
-.menuLink a {
-    color: black;
-    font-weight: bold;
-}
 .DisneyPicture1{
-    background-image:url(images/sourir.jpg);
+    background-image: url(images/sourir.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: cover; /*C'est pour que l'image prenne toute la couverture du site sur la section selectionné*/
     width: 100%;
-    height: 80vh;
+    position: relative;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+.logoliloetstitchecriture{
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    bottom: 20%;
+    left: 20%;
+    right: 20%;
 }
 .textaline1{
     margin-left: 5%;
+    position: absolute;
 }
 .DisneyPicture2{
     display: flex;
-    padding: 2%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
     background-color:whitesmoke;
     width: 100%;
 }
@@ -66,13 +80,14 @@ a{
 }
 p{
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-    }
+}
 .sectionDisneyPlus{
     background-color:rgb(1, 52, 59);
     padding-bottom: 100px; /*padding pour mettre des espaces en bas de l'image..*/
 }
 .SurDisney{
     display: flex;
+    flex-wrap: wrap;
     color:white;
     justify-content: center;
 }
@@ -81,23 +96,26 @@ p{
     text-align: center;
 }
 #disney{
-    padding: 8px;
-    margin: 8px;
-
+    padding: 20px;
+    margin: 20px;
 }
 .cardImg2{
     color: white;
-    width: 500px;
+    width: 450px;
 }
 .cardImgMargin{
     margin-right: 2em;
     margin-left: 2em;
+}
+.textPad{
+    margin-right: 40%;
 }
 .inscription{
     text-align: end;
 }
 .basDuSite{
     background-color: whitesmoke;
+    background-size: cover;
 } 
 .marginParcs{
     padding-top: 30px;
@@ -116,6 +134,7 @@ p{
 }
 .parcsPicture{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 20px;
 
@@ -126,11 +145,11 @@ p{
 }
 .sectionPicture3{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-right: 2em;
     margin-left: 2em;
 }
-
 .spectaclesTitle{
     font-size: 1.5em;
     margin-top: 10px;
@@ -139,6 +158,7 @@ p{
 }
 .spectPicture{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color:whitesmoke;
 }
@@ -156,6 +176,7 @@ p{
 }
 .centerTitle{
     text-align: center;
+    padding-top: 4%
 } 
 .DisneyStorePicture{
     width: 90%;
@@ -163,8 +184,12 @@ p{
 }
 .shopBannerPicture{
     height: 65vh;
-    margin-left: 50px;
-    margin-right: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    background-size: cover;
+    margin-left:px;
+    margin-right: px;
 }
 .DisneyStoreLogoPicture{
     position: absolute;
@@ -179,12 +204,14 @@ p{
 }
 .PicturesSection{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .boutiqueMarge{
     width: 100%;
     margin-right: 2em;
     margin-left: 2em;
+   
 }
 .PicturesSection5{
     height: 400px;
@@ -195,7 +222,8 @@ p{
     padding-left: 50px;
 }
 .padding1{
-padding-top: 30px; 
+    padding-right: px;
+    
 }
 .padding2{
     padding-bottom: 20px;
@@ -206,4 +234,127 @@ padding-top: 30px;
     width: 100%; /*Pour couvrir l'image à 100% de la taille de mon site sur la section*/
     margin-right: 2em; /*Pour avoir de la marge à droite*/
     margin-left: 2em; /*Pour avoir de la marge à gauche*/
+}
+/********************Burger Menu ***********************/
+
+
+/**Mobile (Hamburger-)Menu from here on**/
+
+/** This is kind of a styled trigger here **/
+#menuToggle
+{
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+#menuToggle input
+{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+#menuToggle span
+{
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ECF0F1;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 3px 0px;
+    transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+#menuToggle span:first-child
+{
+    transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2)
+{
+    transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #E74C3C;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg)     
+      scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+/*This is the Menu part, which gets triggered by toggle*/
+#menu
+{
+    position: absolute;
+    width: 90vw;
+    height: 110vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: rgba(236, 240, 241, 0.97);;
+    list-style-type: none;
+    transform-origin: 0 0;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    text-align: center;
+}
+#menu li
+{
+    padding: 15px 0;
+    color: #000000;
+    list-style-type: none;
+    font-size: 2em;
+    font-weight: 300;
+}
+#menu li a {
+      color: #E74C3C;
+      text-decoration: none;
+      text-tmenuBurgerDisneyransformation: uppercase
+}
+#menu li a:hover {
+    color: #2C3E50;
+    text-decoration: none;
+}
+#menuToggle input:checked ~ ul
+{
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+}
+.menuBurgerDisney{
+    display: none; /*Si on veut que le menu burger disparaisse de notre site*/
+}
+
+/*Pour faire apparaître le menu burger lorsque l'on réduit la fenêtre de notre site*/
+@media screen and (max-width: 800px) {
+    .menuBurgerDisney{
+         display: block;
+    }
+    .desktopMenu{
+        display: none;
+    } 
+    .DisneyPicture1{
+        display: ;
+    }
 }
