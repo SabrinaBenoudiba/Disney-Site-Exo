@@ -10,11 +10,7 @@ ul li{
    list-style: none; 
    margin: 5%; 
    }
-body{
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 a{
     text-decoration: none; /*Pour retirer le soulignement bleu du texte*/
     font-size: 15px;
@@ -30,33 +26,66 @@ a:hover{
 .menuLink{ /*C'est la boîte parent par défaut de mon menuLink : c'est pour agir seulement sur le menuLink qui est dans mon menu ul li*/
     display: flex;
 }
-.DisneyPicture1{
+.Background{
     background-image: url(images/sourir.jpg);
     background-position: center;
-    background-size: cover; /*C'est pour que l'image prenne toute la couverture du site sur la section selectionné*/
-    width: 100%;
+    background-size: contain; /*C'est pour que l'image prenne toute la couverture du site sur la section selectionné*/
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: 0 auto; /*on a demandé pas de marge donc (0) et on veut que ça se centre donc on a noté (auto)*/
+    min-height: 650px;
     position: relative;
-    padding-left: 10%;
-    padding-top: 10%;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.logo1{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 10%;
 }
 .logoliloetstitchecriture{
-    width: 20%;
-    position: absolute;
-    top: 10%;
-    bottom: 20%;
-    left: 20%;
-    right: 20%;
+
 }
 .textaline1{
-    margin-left: 5%;
-    position: absolute;
+    text-align: center;
+}
+.button1{
+    display: flex;
+    align-self: center;
+    background-color: #6C789E;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.button2{
+    display: flex;
+    align-self: center;
+    background-color: transparent;
+    color: black;
+    border: 2px solid #6C789E;
+    border-radius: 50px;
+    padding: 15px 57px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
 }
 .DisneyPicture2{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
     background-color:whitesmoke;
-    width: 100%;
+    width: 80%;
+    gap: 15px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 0 auto; /*on a demandé pas de marge donc (0) et on veut que ça se centre donc on a noté (auto)*/
 }
 .disneyPictureP{
     font-size: 1.5em;
@@ -84,12 +113,15 @@ p{
 .sectionDisneyPlus{
     background-color:rgb(1, 52, 59);
     padding-bottom: 100px; /*padding pour mettre des espaces en bas de l'image..*/
+    width: 80%;
+    margin: 0 auto; /*on a demandé pas de marge donc (0) et on veut que ça se centre donc on a noté (auto)*/
 }
 .SurDisney{
     display: flex;
     flex-wrap: wrap;
     color:white;
     justify-content: center;
+    
 }
 .disneyTitle{
     color:#fffff7;
@@ -97,7 +129,6 @@ p{
 }
 #disney{
     padding: 20px;
-    margin: 20px;
 }
 .cardImg2{
     color: white;
@@ -108,7 +139,7 @@ p{
     margin-left: 2em;
 }
 .textPad{
-    margin-right: 40%;
+    margin-left: 2em;
 }
 .inscription{
     text-align: end;
@@ -116,12 +147,15 @@ p{
 .basDuSite{
     background-color: whitesmoke;
     background-size: cover;
+    width: 80%;
+    margin: 0 auto; /*on a demandé pas de marge donc (0) et on veut que ça se centre donc on a noté (auto)*/
 } 
 .marginParcs{
     padding-top: 30px;
 }
 .color{
     background-color: #fffff7;
+    padding-top: 35px;
 }
 .parcsHaut{
     font-size: 1.5em;
@@ -170,6 +204,7 @@ p{
 }
 .leRoiLionPicture{
     width: 700px;
+    
 }
 .spectacleBold{
     font-weight: bold;
@@ -188,53 +223,124 @@ p{
     flex-wrap: wrap;
     justify-content: stretch;
     background-size: cover;
-    margin-left:px;
-    margin-right: px;
-}
-.DisneyStoreLogoPicture{
-    position: absolute;
-    height: 110px;
-    margin-top: 160px;
-    margin-left: 100px;
+    width: 90%;
+    margin: 0 auto;
 }
 .filmsTitle{
     text-align: center;
     margin-top: 3%;
     margin-bottom: 1%;
 }
+.filmPadding{
+    padding-bottom: 3%;
+}
 .PicturesSection{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.boutiqueMarge{
-    width: 100%;
-    margin-right: 2em;
-    margin-left: 2em;
-   
+.background2{
+    background-image: url(images/shopBannerPereetFille.jpg);
+    background-position: center;
+    background-size: contain; /*C'est pour que l'image prenne toute la couverture du site sur la section selectionné*/
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: 0 auto; /*on a demandé pas de marge donc (0) et on veut que ça se centre donc on a noté (auto)*/
+    min-height: 450px; /*Dans ce cas spécifique c'est pour agir sur la taille de la boîte*/
+    position: relative;
+}
+.DisneyStoreSection{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 10%;
+}
+.DisneyStoreLogoPicture{
+    height: 95px;
+    margin-top: 70px;
+}
+.disneyStoreText1{
+    text-align: center;
+    color: white;
+}
+.disneyStoreText2{
+    text-align: center;
+    color: white;
 }
 .PicturesSection5{
-    height: 400px;
-    margin-left: 50px;
-    margin-right: 50px;
+    height: 350px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 .margeSection5{
-    padding-left: 50px;
 }
-.padding1{
-    padding-right: px;
-    
+.padding1{  
 }
-.padding2{
-    padding-bottom: 20px;
+.background3{
+    background-image: url(images/enveloppe\ disney.jpg);
+    background-position: center;
+    background-size: contain; /*C'est pour que l'image prenne toute la couverture du site sur la section selectionné*/
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: 0 auto; /*on a demandé pas de marge donc (0) et on veut que ça se centre donc on a noté (auto)*/
+    min-height: 450px; /*Dans ce cas spécifique c'est pour agir sur la taille de la boîte*/
+    position: relative;
 }
-.EnveloppePicture{
-    background-size: cover;
+.PlusDactusText{
+    display: flex;
+    font-size: 2.5em; /*Pour augmenter la taille du texte*/
+    color: white;
+    flex-direction: column;
     position: absolute;
-    width: 100%; /*Pour couvrir l'image à 100% de la taille de mon site sur la section*/
-    margin-right: 2em; /*Pour avoir de la marge à droite*/
-    margin-left: 2em; /*Pour avoir de la marge à gauche*/
+    text-align: center;
+    top: 30%;
+    left: 30%;
 }
+.button3{
+    display: flex;
+    align-self: center;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.lastSection{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.lienHypertext{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;     
+}
+.logoSmall{
+    padding: 2% 0 0 1%;
+}
+.logoSmall2{
+    width: 6em;
+}
+.finalItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.footerLink{
+    margin-left: 1em;
+    font-size: smaller; /*Taille de la police*/
+    font-weight: normal; /*Poids de la police gras ou pas gras grasse ou pas grasse*/
+}
+
+
 /********************Burger Menu ***********************/
 
 
@@ -346,6 +452,7 @@ p{
     display: none; /*Si on veut que le menu burger disparaisse de notre site*/
 }
 
+
 /*Pour faire apparaître le menu burger lorsque l'on réduit la fenêtre de notre site*/
 @media screen and (max-width: 800px) {
     .menuBurgerDisney{
@@ -353,8 +460,23 @@ p{
     }
     .desktopMenu{
         display: none;
-    } 
-    .DisneyPicture1{
-        display: ;
+}
+    .logo1{
+        width: 300px;
+        top: 30em;
+       /* margin: 0 auto;*/
+    }
+    .DisneyPicture2{
+        margin-top: 15em;
+    }
+    .parcsImg{
+        width: 100%;
+    }
+    .leRoiLionPicture{
+        width: 100%;
+    }
+    .logo1{
+        margin-left: 15%;
+        background-color:rgba(240, 255, 255, 0.378);
     }
 }
